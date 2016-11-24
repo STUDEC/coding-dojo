@@ -1,5 +1,5 @@
-# coding-dojo
-Repository to use during the coding dojo geek party
+# Coding-dojo repository
+This repository is used to store all the coding dojo done during STUDEC geek party.
 
-# Documentation of the coding-dojo
+# Coding-dojo documentation
 https://studec.github.io/coding-dojo/

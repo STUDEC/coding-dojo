@@ -35,4 +35,18 @@ public class TestGrid {
         assertThat(grid.getWidth()).isEqualTo(width);
     }
 
+    @Test
+    public void shouldBeFilledWhenFilled() {
+        // given
+        final Grid grid = new Grid(4, 23);
+        final int x = 0;
+        final int y = 2;
+
+        // when
+        grid.fill(x, y);
+
+        // then
+        assertThat(grid.isFilled(x, y)).isTrue();
+    }
+
 }

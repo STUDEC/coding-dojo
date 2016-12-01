@@ -89,7 +89,6 @@ public class GridShould {
 
         // then
         Assertions.assertThat(grid.computeArea()).isEqualTo(w * h);
-
     }
 
 }

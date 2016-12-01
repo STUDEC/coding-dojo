@@ -20,7 +20,7 @@ public class TilingViewer extends Application {
     public void start(final Stage primaryStage) {
 
         // construct tiling
-        final Tiling tiling = new Tiling1(40, 40);
+        final Tiling tiling = new Tiling1(10, 10);
 
         // construct gridpane
         final GridPane grid = new GridPane();

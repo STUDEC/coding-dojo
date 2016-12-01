@@ -1,5 +1,6 @@
 package fr.studec.codingdojo.domino;
 
+import fr.studec.codingdojo.domino.grid.Grid1;
 import fr.studec.codingdojo.domino.tiling.Tiling;
 import fr.studec.codingdojo.domino.tiling.Tiling1;
 import javafx.application.Application;
@@ -20,7 +21,7 @@ public class TilingViewer extends Application {
     public void start(final Stage primaryStage) {
 
         // construct tiling
-        final Tiling tiling = new Tiling1(10, 10);
+        final Tiling tiling = new Tiling1(new Grid1(10, 10));
 
         // construct gridpane
         final GridPane grid = new GridPane();

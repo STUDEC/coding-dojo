@@ -1,6 +1,8 @@
 package fr.studec.codingdojo.domino.grid;
 
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.shouldHaveThrown;
+
 import org.junit.Test;
 
 import fr.studec.codingdojo.domino.exceptions.OutOfBoundException;
@@ -15,8 +17,8 @@ public class GridShould {
         final Grid grid = new Grid1(W, H);
 
         // then
-        Assertions.assertThat(grid.getHeight()).isEqualTo(H);
-        Assertions.assertThat(grid.getWidth()).isEqualTo(W);
+        assertThat(grid.getHeight()).isEqualTo(H);
+        assertThat(grid.getWidth()).isEqualTo(W);
     }
 
     @Test
@@ -30,8 +32,8 @@ public class GridShould {
                 final int cellId = grid.cellId(x, y);
 
                 // then
-                Assertions.assertThat(grid.computeX(cellId)).isEqualTo(x);
-                Assertions.assertThat(grid.computeY(cellId)).isEqualTo(y);
+                assertThat(grid.computeX(cellId)).isEqualTo(x);
+                assertThat(grid.computeY(cellId)).isEqualTo(y);
             }
         }
     }
@@ -44,7 +46,7 @@ public class GridShould {
         // when
         grid.cellId(grid.getWidth(), grid.getHeight());
 
-        Assertions.shouldHaveThrown(OutOfBoundException.class);
+        shouldHaveThrown(OutOfBoundException.class);
     }
 
     @Test
@@ -58,12 +60,12 @@ public class GridShould {
 
         // then
 
-        Assertions.assertThat(grid.contains(0)).isTrue();
-        Assertions.assertThat(grid.contains(w * h - 1)).isTrue();
+        assertThat(grid.contains(0)).isTrue();
+        assertThat(grid.contains(w * h - 1)).isTrue();
     }
 
     @Test
-    public void doesNotContainsOutsideCells() {
+    public void notContainsOutsideCells() {
         // given
         final int w = 12;
         final int h = 14;
@@ -73,9 +75,9 @@ public class GridShould {
 
         // then
 
-        Assertions.assertThat(grid.contains(-1)).isFalse();
-        Assertions.assertThat(grid.contains(w * h)).isFalse();
-        Assertions.assertThat(grid.contains(w * h + 1)).isFalse();
+        assertThat(grid.contains(-1)).isFalse();
+        assertThat(grid.contains(w * h)).isFalse();
+        assertThat(grid.contains(w * h + 1)).isFalse();
     }
 
     @Test
@@ -88,7 +90,7 @@ public class GridShould {
         final Grid grid = new Grid1(w, h);
 
         // then
-        Assertions.assertThat(grid.computeArea()).isEqualTo(w * h);
+        assertThat(grid.computeArea()).isEqualTo(w * h);
     }
 
 }

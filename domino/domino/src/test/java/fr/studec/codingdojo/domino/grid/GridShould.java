@@ -63,7 +63,7 @@ public class GridShould {
     }
 
     @Test
-    public void doesNotContainsOutsideCells() {
+    public void notContainsOutsideCells() {
         // given
         final int w = 12;
         final int h = 14;

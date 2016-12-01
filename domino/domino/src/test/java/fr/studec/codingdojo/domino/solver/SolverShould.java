@@ -8,7 +8,6 @@ import org.junit.Test;
 import fr.studec.codingdojo.domino.tiling.Tiling;
 
 public class SolverShould {
-
     @Ignore
     @Test
     public void failForOddNumberOfCells() {
